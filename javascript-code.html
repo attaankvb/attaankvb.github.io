@@ -1,0 +1,236 @@
+<html><head>
+    <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>JAVASCRIPT</title>
+    <style>
+
+body.code-js-body{ 
+  color:whitesmoke;
+  background-image: url(data:image/jpeg;base64,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);
+}
+
+
+        #co {
+  font-size:140px;
+  text-align:center;
+  position: relative;
+}
+#so {
+  font-size:140px;
+  text-align:center;
+  position: relative;
+  
+}
+#co,#so  {-webkit-box-reflect: below 0px linear-gradient(transparent, rgba(0, 0, 0, 0.3)) ;
+
+}
+
+
+    #js-vid {
+position:absolute;
+
+width: 98%;
+height: 25vh;  /* Sets the height to 25% of viewport height */
+object-fit: cover;  /* Ensures video fills the container */
+}
+
+.topnav {
+  overflow: auto;
+  width: 100%;
+    background-color: rgb(0, 98, 255);
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: orange;
+  text-align: center;
+  
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+    background-color: rgb(13, 150, 209);
+    box-shadow: 0 0 5px rgb(16, 232, 196), 0 0 5px rgb(16, 232, 196), 0 0 5px rgb(16, 232, 196), 0 0 5px rgb(16, 232, 196);
+}
+
+.topnav a.active {
+  margin-right: 15px;
+  display:block;
+  float: right;
+  background-color: #04AA6D;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a{float: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav a.active{
+    float:none;
+    margin:0px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: bottom;
+    display: block;
+    text-align: left;
+  }
+}   
+#inp1 {display:flex;
+      justify-content: right;
+      align-items: center;}
+
+.button {background-color: aqua;
+          color:whitesmoke;
+         font-size: 40px;
+         border:none;
+         margin-right:5px ;
+         }
+
+#submit {
+    background-color: Red;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+   border:none;
+    font-size:30px;
+    margin: 3px;
+    
+}
+#submit:hover {
+    background-color:white;
+    color:red;
+    
+}   
+legend{text-align: center; font-size: xx-large;}
+.lah ,.inpcol{background-color: rgb(7, 119, 7); border: rgb(7, 119, 7); border-width: 1px; border-radius: 10%;}
+div p {font-size: 30px;}
+
+@media screen and (max-width: 750px) {
+  
+   div p{font-size:15px;}
+  .button {font-size:20px;}
+  #inp1{display: block;
+    }
+  pre{margin: 0; font-size: 10px;}
+  #submit {font-size: 15px;}
+}
+.toptitle {
+  font-size: 60px; /* Adjust font size as desired */
+  color: rgb(81, 78, 78); /* Change color to your preference */
+  margin: 0;
+  text-align: center;
+  text-shadow: 3px 2px 4px rgb(21, 255, 13); /* Add subtle shadow */
+  
+}
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .toptitle {
+    font-size: 35px; /* Adjust font size for smaller screens */
+  }
+}
+</style><script src="code.js"></script></head>
+        
+
+<body class="code-js-body">
+    <div class="coming-soon" style="display:none;">
+        <div id="co">COMING</div>
+        <div id="so">SOON</div>
+    </div>
+    <div class="container" style="display:none;">
+    <div id="a"></div> <div id="j">JAVASCRIPT</div><div id="c"></div>
+    </div> 
+
+    <div class = "toptitle">JAVASCRIPT</div>
+    <div class="topnav" id="myTopnav">
+            
+        <a href="index.html">Home</a>
+
+                <a href="python-codes.html">Python</a>
+                <a href="javascript-code.html">JavaScript</a>  
+       
+      </div><br>
+
+
+
+        <div class="inpcol">
+            <legend>Background Color Through Input</legend>
+        <div id="colorselector"> 
+            <p >Select the desired color to make the background of that particular color.</p><p>
+            </p><div id="inp1">
+                <input type="color" style="width:200px;" value="#ff0000" id="selector"><pre>      </pre>
+
+                <button onclick="change()" class="button op">ENTER</button> 
+            </div>
+            <br>
+            <b>CODE:  </b>
+            <pre>                    
+function change(){
+let c = document.getElementById("selector").value;
+document.getElementById("colorselector")
+.style.backgroundColor = c;
+}
+                          </pre>
+        </div>
+      </div>
+        <br>
+        <br>
+
+        <div class="lah">
+            <legend>Lcm And Hcf</legend>
+            <div id="hcf">
+                <p>Select the desired Number whom you want to find LCM and HCF.</p><p>
+                </p><div><h3>
+                    <label for="n1">Number 1: </label>
+                    <input type="number" id="n1" placeholder="Number 1"><br>
+                    <label for="n2">Number 2: </label>
+                    <input type="number" id="n2" placeholder="Number 2">
+                    <button type="button" onclick="idk()" id="submit">SUBMIT</button>
+                </h3></div>
+                <div id="inp2" bgcolor="white">
+                </div>
+                <b>CODE:  </b>
+            <pre>function idk() {
+    var a = document.getElementById("n1").value;
+    var b = document.getElementById("n2").value;
+    x = [a,b];
+    x.sort();
+    var hcf 
+    var r
+    if(x[1]%x[0]==0){
+        hcf = x[0];
+        
+    }else{
+        r = x[1] % x[0];
+        while(r!=0){
+            x[1] = x[0];
+            x[0] = r;
+            r = x[1] % x[0];
+        hcf = x[0];
+        
+        }
+    }
+            </pre>
+            </div>
+          </div>
+    
+    <br>
+
+
+
+
+
+</body></html>

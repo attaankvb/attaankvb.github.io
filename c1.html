@@ -1,0 +1,144 @@
+
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<style>
+
+    
+#l1, #l2, #l3, #l4, #l5{
+  
+  color: white;
+  background-color: REd;
+  padding: 1em 1.5em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 5px 5px white ;
+  
+}
+body{font-size: 20px;}
+@media screen and (max-width: 750px) {
+  body{font-size: 15px;}
+}
+body.code-python-body{ 
+  color:whitesmoke;
+  background-image: url(data:image/jpeg;base64,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);
+}
+
+</style>
+
+<body class="code-python-body">
+ <b>
+    <pre>from sqlite3 import *<br>
+from tkinter import *<br>
+from tkinter.ttk import *<br>
+from tkinter.messagebox import * <br>
+<br>
+con = connect("DETAILS.db")<br>
+cur = con.cursor()<br>
+<br>
+w = Tk()<br>
+w.title("Register")<br>
+w.geometry("700x400")<br>
+w.resizable(False,False)
+
+#Style
+
+s = Style()
+s.configure('Header.TFrame', background = 'blue')
+
+header_frame = Frame(w,style = "Header.TFrame")
+header_frame.pack(fill = X)
+
+s.configure('TLabel', background = 'Blue', foreground = "White",font = ("Arial", 25))
+header_label = Label(header_frame, text = "Register")
+header_label.pack(pady = 10)
+
+s.configure("Content.TFrame", background = 'white')
+content_frame  = Frame(w,style = 'Content.TFrame')
+content_frame.pack(fill = BOTH,expand = TRUE)
+
+login_frame = Frame(content_frame ,style = 'Content.TFrame')
+login_frame.place(relx = .5,rely  = .5,anchor = CENTER)
+
+s.configure('Login.TLabel', background = 'white',foreground = "Black",font = ("arial",15))
+
+#personal name entry
+
+
+Name_label = Label(login_frame,text = "Enter Your Name: ",style = 'Login.TLabel')
+Name_label.grid(row  = 0,column = 0)
+
+Name_Entry = Entry(login_frame,width = 25)
+Name_Entry.grid(row = 0, column = 1,pady = 5,padx = 5)
+
+#DOB
+
+
+DOB_label = Label(login_frame,text = 'DOB(dd/mm/yyyy): ',style = 'Login.TLabel')
+DOB_label.grid(row = 1,column = 0)
+
+DOB_entry = Entry(login_frame,width = 25)
+DOB_entry.grid(row = 1,column = 1,pady = 5,padx = 5)
+
+
+#Father Name entry
+
+FN_label = Label(login_frame,text = "Enter Your Father Name: ",style = 'Login.TLabel')
+FN_label.grid(row  = 2,column = 0)
+
+FN_Entry = Entry(login_frame,width = 25)
+FN_Entry.grid(row = 2, column = 1,pady = 5,padx = 5)
+
+#Mother Name entry
+
+MN_label = Label(login_frame,text = "Enter Your Mother Name: ",style = 'Login.TLabel')
+MN_label.grid(row  = 3,column = 0)
+
+MN_Entry = Entry(login_frame,width = 25)
+MN_Entry.grid(row = 3, column = 1,pady = 5,padx = 5)
+
+#Gender
+
+gender_label = Label(login_frame,text = "Choose your gender: ",style = 'Login.TLabel')
+gender_label.grid(row = 4, column = 0)
+
+gender = IntVar()
+boy_gender = Radiobutton(login_frame,text = "Boy",value = 1,variable = gender)
+boy_gender.grid(row = 4,column = 1)
+
+girl_gender = Radiobutton(login_frame,text = "Girl",value = 2,variable = gender)
+girl_gender.grid(row = 4,column = 2)
+
+#class
+
+Class_label = Label(login_frame,text = "Select your class: ",style = 'Login.TLabel')
+Class_label.grid(row = 5,column = 0)
+
+Classes = ("I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII")
+class_combo = Combobox(login_frame,state = "readonly",values = Classes)
+class_combo.grid(row = 5,column = 1,pady = 5,padx = 5)
+class_combo.set("Your Class")
+
+#submit
+G = ""
+def submit():
+    if gender.get() == 1:
+        global G
+        G = "Boy"
+    elif gender.get() == 2:
+        G = "Girl"
+
+    cur.execute("insert into Student( Name,DOB,Father,Mother,Gender,C) values(?,?,?,?,?,?)",(str(Name_Entry.get()),str(DOB_entry.get()),str(FN_Entry.get()),str(MN_Entry.get()),str(G),str(class_combo.get())))
+    con.commit()
+    print("Data is successfully added")
+    showinfo("Message","Name: " +str(Name_Entry.get())+"\n DOB: "+str(DOB_entry.get())+"\n Father's Name: "+str(FN_Entry.get())+"\n Mother's Name: "+str(MN_Entry.get())+"\n Gender: "+str(G)+"\n Class: "+str(class_combo.get()))
+sub_button = Button(login_frame,text = "Save",command = submit)
+sub_button.grid(row = 6,column =1)
+
+
+w.mainloop()
+</pre></b><br>
+<a href="python-codes.html" id="l1">back</a><br><br><br>
+</body>

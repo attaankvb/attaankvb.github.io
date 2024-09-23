@@ -37,13 +37,13 @@ object-fit: cover;  /* Ensures video fills the container */
 .topnav {
   overflow: auto;
   width: 100%;
-    background-color: rgb(0, 98, 255);
+    background-color: #040273;
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: orange;
+  color: #FFA500;
   text-align: center;
   
   padding: 14px 16px;
@@ -52,6 +52,7 @@ object-fit: cover;  /* Ensures video fills the container */
 }
 
 .topnav a:hover {
+    transition: linear 0.3s;
     background-color: rgb(13, 150, 209);
     box-shadow: 0 0 5px rgb(16, 232, 196), 0 0 5px rgb(16, 232, 196), 0 0 5px rgb(16, 232, 196), 0 0 5px rgb(16, 232, 196);
 }
@@ -62,9 +63,7 @@ object-fit: cover;  /* Ensures video fills the container */
   float: right;
   background-color: #04AA6D;
   color: white;
-}
-
-@media screen and (max-width: 600px) {
+}@media screen and (max-width: 600px) {
   .topnav a{float: none;}
   .topnav a.icon {
     float: right;

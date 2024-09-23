@@ -22,7 +22,8 @@ body {
   min-height: 100%;
 }
 
-.content {
+#content {
+
     font-size: x-large;
   position: fixed;
   bottom: 0;
@@ -31,6 +32,8 @@ body {
   width: 100%;
   padding: 20px;
   text-shadow: 3px 2px 4px  #25cb25f0 ;
+  transform: translateY(100%);
+  transition: transform ease-in-out 1s;
   box-shadow: 0 0 30px rgb(52, 16, 232), 0 0 10px rgb(52, 16, 232), 0 0 10px rgb(52, 16, 232), 0 0 10px rgb(52, 16, 232);
 }
 
@@ -49,27 +52,29 @@ body {
   color: black;
 }
 </style>
+<script>
+      
+  setTimeout(function(){
+    document.getElementById('content').style.transform = 'translateY(0px)';
+    
+  }, 300);
+
+  
+</script>
 </head>
 <body>
 
-<video autoplay muted id="myVideo">
+<video autoplay loop muted id="myVideo">
   <source src="ok.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
 </video>
 
-<div class="content">
+<div id="content">
   <center><h1>ATTAANKVB</h1>
   <p>WELCOME TO MY WEB</p></center>
 </div>
 
-  <script>
-  window.onload = function() {
-    setTimeout(function(){
-      window.location.href = "page_imp.html";
-      
-    }, 2500);
-  };
-  </script>
+
 
 
 </body>

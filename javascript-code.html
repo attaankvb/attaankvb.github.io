@@ -92,13 +92,18 @@ object-fit: cover;  /* Ensures video fills the container */
       justify-content: right;
       align-items: center;}
 
-.button {background-color: aqua;
+.button {background-color: red;
           color:whitesmoke;
          font-size: 40px;
          border:none;
          margin-right:5px ;
+         transition: ease-in-out 0.5s;
          }
-
+.button:hover {background-color: whitesmoke;
+          color:red;
+         font-size: 40px;
+         border:none;
+         margin-right:5px ;}
 #submit {
     background-color: Red;
     color: white;
@@ -107,7 +112,7 @@ object-fit: cover;  /* Ensures video fills the container */
    border:none;
     font-size:30px;
     margin: 3px;
-    
+    transition: ease-in-out .5s;
 }
 #submit:hover {
     background-color:white;
@@ -115,7 +120,7 @@ object-fit: cover;  /* Ensures video fills the container */
     
 }   
 legend{text-align: center; font-size: xx-large;}
-.lah ,.inpcol{background-color: rgb(7, 119, 7); border: rgb(7, 119, 7); border-width: 1px; border-radius: 10%;}
+.lah ,.inpcol{background-color: #ddffdd; border: rgb(7, 119, 7); border-width: 1px; border-radius: 5%; color:#121212;}
 div p {font-size: 30px;}
 
 @media screen and (max-width: 750px) {

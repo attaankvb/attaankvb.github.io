@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Independence Day Update</title>
+</head>
+<style> 
+
+body {
+
+    background-color: #0C0404;
+    
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(orange,white,green); 
+  border-radius: 10px;
+}
+#orange, #white,  #green{
+    height: 33.33vh;
+    display: block;
+    width:100%;
+    min-height: max-content;
+    animation: change 2.5s ;
+    margin-top: 0.1vh;
+    margin-bottom: 0.1vh;
+    Color: Blue;
+    font-size: 15vw;
+
+}
+#orange {background-color: orange;}
+#white {background-color: white;}
+#green {background-color: green;}
+
+img {
+    display:none;
+    height:33.33vh;
+    width:25vw;
+    position: absolute; 
+    top:34.73vh;
+    left:37.5vw;}
+
+#popp{
+    display:none;
+    position: absolute;
+    bottom:1vh;
+    right: 3vw;
+    font-size: 5vh;    
+    color: whitesmoke;
+    
+}
+
+@keyframes change {
+    0% {width: 0%}
+    100% {width:100%;}
+}
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg)}
+}
+    
+</style>
+
+<body>
+
+
+   <centre> <div id = "popp"> <b>CLICK AT CENTER</b></div></centre>
+    <div id = "orange">
+
+    </div>
+
+    <div id = "white">
+
+    </div>
+
+    <div id = "green">
+
+    </div>
+    <div id = "taker" ><img id = 'kk' src=  "kk.png" ></div>
+    
+</body>
+<script>
+var x = 33.33
+function appear2(params) {
+    document.getElementById('popp').style.display = "block";
+}
+function Disap() {document.getElementById("popp").style.display = 'none';}
+
+
+function appear(params) {
+    document.getElementById('kk').style.display = "block";
+    setTimeout(appear2,1000);
+    setTimeout(Disap,3000);
+    
+}
+setTimeout(appear,2499);
+
+    let k = 0
+    document.getElementById('green').style.textAlign = "center";
+        function Day() {
+            var title3 = "Day"
+            if (k < title3.length) {
+                document.getElementById('green').innerHTML += title3.charAt(k);
+                k+=1
+            }
+        setTimeout(function(){
+      window.location.href = "page_imp.html";
+      
+    }, 2500);
+
+        
+        }
+    let l = 0
+    document.getElementById('white').style.textAlign = 'center';
+        function independence() {
+            var title2 = "Independence"
+            if (l < title2.length) {
+                document.getElementById('white').innerHTML += title2.charAt(l);
+                l=  l+1
+            }
+            setInterval(Day,1500)
+        }
+
+   let i = 0
+   document.getElementById('orange').style.textAlign = 'center';
+      function happy() {
+        var title = "Happy";
+        
+        if (i < title.length ){
+          document.getElementById("orange").innerHTML += title.charAt(i);
+          i=i+1
+        }
+        setInterval(independence,1000)
+       
+      }
+document.getElementById("taker").addEventListener("click",function() 
+{document.getElementById("kk").style.display = 'none';
+setInterval(happy, 100);
+
+
+
+});
+
+      
+</script>
+</html>

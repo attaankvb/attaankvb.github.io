@@ -94,6 +94,14 @@ var x = 33.33
 document.getElementById('orange').style.width = "0vw";
 document.getElementById('white').style.width = "0vw";
 document.getElementById('green').style.width = "0vw";
+
+function boom(){
+document.getElementById('orange').style.width = "100vw";
+document.getElementById('white').style.width = "100vw";
+document.getElementById('green').style.width = "100vw";
+}
+
+setTimeout(boom,4498)
 function appear2(params) {
     document.getElementById('popp').style.display = "block";
 }
@@ -154,12 +162,6 @@ setInterval(happy, 100);
 
 });
 
-function boom(){
-document.getElementById('orange').style.width = "100vw";
-document.getElementById('white').style.width = "100vw";
-document.getElementById('green').style.width = "100vw";
-}
 
-setTimeout(boom,4998)
 </script>
 </html>

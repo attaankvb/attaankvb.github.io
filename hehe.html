@@ -68,6 +68,16 @@ body {
     
 }
 
+@media (max-width: 350px) {
+  body {
+    background-position-y:-40px;
+    background-position-x: -150px;
+    background-size: 300%;/* Adjust font size for smaller screens */
+  }
+
+  #msg{
+    left:-9px; }
+}
 @keyframes move {
     0% {bottom: -40vh;}
     60% {bottom:10vh;}
@@ -130,4 +140,5 @@ setTimeout(msgshow,500)
 
 
 </script>
+
 </html>

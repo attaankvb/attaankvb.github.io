@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VijayaDashmi</title>
+</head>
+<style>
+    body{
+        background: radial-gradient(#ff7b00,#ff0000);
+        overflow-y: hidden;
+        overflow-x: hidden;
+        
+    }
+    #container2 {
+        display:none;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        overflow: hidden;
+        width: 100vw;
+        height:100vw;
+        size: 50vh;
+        animation: upp 4s linear;
+        animation-delay: 1001s;
+        object-fit: cover;
+        left:-5vw;
+        bottom: -100vh;
+        position: relative;
+    }
+        #raam{width:100vw;
+
+   height:max-content;
+    position: relative;}
+       
+  @keyframes upp {
+    0% {bottom:-100vh}
+    100% {bottom:10vh}
+  }
+
+
+
+
+    
+    
+       #container {
+        display:none;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        overflow: hidden;
+        width: 16vw;
+        height:50vw;
+        size: 50vh;
+        object-fit: cover;
+        left: 40%;
+        position: relative;
+        animation: full 4s ;
+        animation-delay: 1001s;
+        
+    }
+    @keyframes full {
+        0% {width:16vw;left:40%}
+        100% {width:100vw;left:-0.6%}
+    }
+
+    #rvn{width:100vw;
+    height: max-content;
+    position: relative;
+    left:2.6vw;
+    animation: boom 4s;
+    animation-delay:1001s;
+
+    
+    }
+@keyframes boom {
+    100% {left:-1%}
+
+}
+
+#msg {
+    text-align: center;
+    position: absolute;
+    display: none;
+    height:10vh;
+    color: #800000;
+    font-size: 8vh;
+    width: 100vw;
+    justify-content: center;
+    align-content: center;
+    bottom:5vh;
+    overflow:hidden;
+
+}
+@media screen and (min-width: 1024px) {
+    
+   
+    
+    #container {
+        display:none;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        overflow: hidden;
+        width: 8vw;
+        top:-30vh;
+        object-fit: cover;
+        left: 40%;
+        position: absolute;
+        animation: full 4s ;
+        animation-delay: 1001s;
+        
+    }
+
+       #rvn{width:50vw;
+
+    position: relative;
+    left:1.5vw;
+    animation: boom 4s;
+    animation-delay:1001s;}
+        
+
+       @keyframes full {
+        0% {width:8vw;left:40%}
+        100% {width:100vw;left:-3%}
+    } 
+    
+
+    #container2 {
+        display:none;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        overflow: hidden;
+        width: 100vw;
+        height:50vh;
+        top:50%;
+        size: 60vh;
+        object-fit: cover;
+        left:-5vw;
+        position: absolute;
+    }
+        #raam{
+            width:65vw;
+        height:78vh;
+
+        position: absolute;
+        }
+
+}
+#butt {
+    text-align: center;
+    position: absolute;
+    height:10vh;
+    color: #800000;
+    background-color: #FFD700;
+    font-size: 5vh;
+    width: 100vw;
+    justify-content: center;
+    align-content: center;
+    bottom:5vh;
+    overflow:hidden;
+    left: 0px;
+    
+
+    
+
+}
+</style>
+<body>
+    
+    <div class=  "image" id="container">
+    <centre><img src= "ravan.png" id ="rvn"></centre></div>
+    <div class= "image2" id=  "container2">
+        
+        <img src="raam.png" id="raam">
+    </div>
+    <div id="msg" style="position:absolute;bottom:5vh">Happy Dussehra</div>
+    <div id="butt">Let Good Triumph</div>
+</body>
+<script>
+    function change(params) {
+        document.getElementById('container').style.width = "100vw";
+        document.getElementById('container').style.left = "-0.6%";
+        document.getElementById('rvn').style.left = "-1%";
+        document.getElementById('container2').style.bottom = "10vh";
+        document.getElementById('msg').style.display = 'block';
+       
+        
+    }
+    function hehe() {
+        document.getElementById('container').style.display = "flex";
+        document.getElementById('container2').style.display = "flex";
+        document.getElementById('butt').style.display = 'none';
+        document.getElementById('container').style.animationDelay = "1s";
+        document.getElementById('rvn').style.animationDelay = "1s";
+        document.getElementById('raam').style.animationDelay = "1s";
+        document.getElementById('container2').style.animationDelay = "1s";
+        setTimeout(change,3000);
+        
+    }
+    document.getElementById('butt').addEventListener('click', hehe);
+    var l = 0
+    function msghehe() {
+            var title2 = "Happy Dussehra"
+            
+            if (l < title2.length) {
+                document.getElementById('msg').innerHTML += title2.charAt(l);
+                l=l+1
+                
+            
+            }
+        }
+</script>
+</html>

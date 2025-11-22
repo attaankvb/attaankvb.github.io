@@ -4,7 +4,7 @@
     
     <meta charset='utf-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Happy Anniversary</title>
+    <title>Happy Birthday </title>
 </head>
 <style> 
 
@@ -33,10 +33,10 @@ body {
     animation: change 2.5s ;
     border-radius: 10px;
     margin:10px;
-    width: 0vw;
+    width: 0vw;     
   
     Color: rgb(0, 0, 0);
-    font-size: 12vw;
+    font-size: 10vw;
     align-content: center;  
     position: absolute;
     transition: width  2s linear;
@@ -76,7 +76,8 @@ body {
   }
 
   #msg{
-    left:-9px; }
+    left:-9px;
+    font-size: 15vw; }
 }
 @keyframes move {
     0% {bottom: -40vh;}
@@ -139,14 +140,15 @@ function time() {
 }
 setTimeout(time,1000)
 document.getElementById('ok').addEventListener("click",function(){document.getElementById('hehe').src = 'gift_open.png';
-    document.getElementById('pic').style.display = 'block';
-    document.getElementById('picc').style.display = 'block';
+  
     
 setTimeout(msgshow,500)
-})
+}
+    
+)
 
         function msghehe() {
-            var title2 = "Happy Anniversary"
+            var title2 = "Happy Anniversary Mumma And Papa"
             
             if (l < title2.length) {
                 document.getElementById('msg').innerHTML += title2.charAt(l);
@@ -156,7 +158,8 @@ setTimeout(msgshow,500)
 
            
             }
-
+            document.getElementById('pic').style.display = 'block';
+    document.getElementById('picc').style.display = 'block';
         
         }
 

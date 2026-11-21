@@ -1,0 +1,158 @@
+<html>
+
+<head>
+<title>Turning Cards </title>
+<style>
+
+body {
+    
+    display:flex;
+    background-image:url(bg.jpg);
+    color:chocolate;
+    font-size:xxx-large;
+    font-family:Verdana;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    perspective: 1000px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.main1 , .main2 {
+    box-shadow:0px 1px 20px 5px rgba(11, 203, 217, 0.61) ;
+    margin:2px;
+    border-radius:9px;
+    transition: transform ease-in-out 1s;
+    width: 52vw;
+    aspect-ratio: 4 / 6;
+    height: auto;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.main1.flipped ,.main2.flipped{
+    transform: rotateY(180deg);
+    box-shadow: 0px 1px 20px 5px rgba(25, 230, 100, 0.9);
+
+}
+#front1 ,#front2 {
+    display:flex;
+    left:0px;
+    width: 52vw;
+    aspect-ratio: 4 / 6;
+    height: auto;
+    border-radius:9px;    
+    position:absolute;
+    top:0px;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    overflow: hidden;
+    
+}
+#text1 , #text2 {
+    left:0px;
+    border-radius: 9px;
+    width: 52vw;
+    aspect-ratio: 4 / 6;
+    height: auto;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+    overflow: hidden;
+    background-color:greenyellow;
+    color:rgb(10, 85, 60);
+    font-size: xxx-large;
+         
+    
+    
+    position: absolute;
+    top:0px;
+    overflow: hidden;
+    
+
+}
+
+#text1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+    line-height: 1.25;
+    
+    width: 100%;
+    height: 100%;
+
+}
+
+
+#front1 img , #front2 img {
+    
+    width: 52vw;
+    aspect-ratio: 4 / 6;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.topl {
+
+    
+    display:flex;
+    flex-direction: row;
+    
+}
+</style>
+</head>
+<body>
+
+<div id = "clickcard"></div>
+
+<div class = "topl" >
+    <div class="main1" onclick="this.classList.toggle('flipped')">
+
+        <div id="front1">    
+            <img src="mumma_papa2.jpg" style="display:block;">
+        </div>
+        <div id="text1">
+            
+        </div>
+
+    </div>
+
+</div>
+</body>
+<script>
+
+let l = 0;
+function show(){
+    var t = "Click On The Card";
+
+    if (l<t.length){
+        document.getElementById('clickcard').innerHTML += t.charAt(l);
+        l=l+1
+
+    setTimeout(show,100);
+    }
+
+}
+setTimeout(show,3000);
+
+let l2 = 0;
+function show2(){
+    var t2 = "HAPPY ANNIVERSARY MUMMA PAPA ";
+
+    if (l2<t2.length){
+        document.getElementById('text1').innerHTML += t2.charAt(l2);
+        l2=l2+1
+
+    setTimeout(show2,100);
+    }
+
+}
+setTimeout(show2,400);
+</script>
+</html>

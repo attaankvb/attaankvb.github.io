@@ -15,7 +15,7 @@ body {
     background-image:linear-gradient(
         rgba(2, 10, 30, 0.25),
         rgba(2, 10, 30, 0.5)
-    ), url('bg.jpg');
+    ), url('bg2.jpg');
     background-color: rgb(241, 243, 245);
     background-position: center;
     background-repeat: no-repeat;
@@ -119,14 +119,14 @@ h5 {
 <script>
 
 let timer; 
-const target = new Date("2026-11-22T00:45:00").getTime();
+const target = new Date("2026-11-22T00:50:00").getTime();
 
 function update(){
     const now = new Date().getTime();
     const difference = target - now;
 
     if (difference <= 0 ) {
-        window.location.href = "turning1.html";
+        window.location.href = "turning.html";
 
         clearInterval(timer);
         return;

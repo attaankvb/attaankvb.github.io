@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTDOWN</title>
+
+</head>
+
+<style>
+
+body {
+    
+    background-image:linear-gradient(
+        rgba(2, 10, 30, 0.25),
+        rgba(2, 10, 30, 0.5)
+    ), url('bg.jpg');
+    background-color: rgb(241, 243, 245);
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+#count {
+    
+    min-height: 10vh;
+    align-items: center;
+    text-align: center;
+    display: flex;      
+    justify-content: center;
+}
+
+h1 {
+    
+    color: #f0f5ff;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    letter-spacing: 0.15em;
+
+    position:relative;
+    padding-top:25vh;
+}
+
+h5 {
+
+    font-size:100%;
+    color:rgb(240, 237, 255);
+    
+}
+.countdown {
+    background-color: #669aa4;
+    color:antiquewhite;
+    border-radius: 15px;
+    display:flex;
+    gap:10px;
+    height: 15vh;
+    padding:10px;
+    justify-content:center;
+    flex-direction: row;
+    align-items: center;
+    
+
+}
+
+#din, #hours ,#minutes, #seconds {
+
+    
+    background-color: #36adf8;
+    min-width: 0;
+    text-align: center;
+    flex:1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    background: rgba(54, 173, 248, 0.16);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    border: 1px solid rgba(74, 188, 254, 0.995);
+    border-radius: 10px;
+
+}
+#dinc, #hoursc, #minc, #secc {
+
+    border-radius: 1px;
+    margin-top:10px;
+    font-family: 'Orbitron',sans-serif; 
+}
+
+
+</style>
+<body>
+
+<div class=  "main">
+<center><h1 id = "txt"> </h1></center>
+    <div id = "count"></div>   
+</div>
+<div class = countdown>
+    <div id = "din">
+        <span id = "dinc"></span>
+        <span><h5>Days</h5></span>
+    </div>
+    <div id = 'hours'>
+        <span id = "hoursc"></span>
+        <span><h5>Hours</h5></span>
+    </div>
+    <div id = 'minutes'>
+        <span id = "minc"></span>
+        <span><h5>Minutes</h5></span>
+    </div>
+    <div id = "seconds">
+        <span id = "secc"></span>
+        <span><h5>Seconds</h5></span>
+    </div>
+</div>
+</body>
+<script>
+
+let timer; 
+const target = new Date("2026-11-22T00:45:00").getTime();
+
+function update(){
+    const now = new Date().getTime();
+    const difference = target - now;
+
+    if (difference <= 0 ) {
+        window.location.href = "turning1.html";
+
+        clearInterval(timer);
+        return;
+
+    };
+
+    const days = Math.floor(difference/86400000);
+    const hour = Math.floor(difference/3600000) % 24 ;
+    const min = Math.floor(difference/60000) % 60;
+    const sec = Math.floor(difference/1000) % 60;
+
+   
+    
+    document.getElementById('dinc').textContent = `${days}`;
+    document.getElementById('hoursc').textContent = `${hour}`;
+    document.getElementById('minc').textContent = `${min}`;
+    document.getElementById('secc').textContent = `${sec}`;
+
+
+}
+
+update()
+
+if (target >= Date.now()){
+    timer = setInterval(update,1000);   
+}
+
+
+let l = 0;
+function show(){
+    var t = "TIME UNTILL MOMENT";
+
+    if (l<t.length){
+        document.getElementById('txt').innerHTML += t.charAt(l);
+        l=l+1
+
+    setTimeout(show,100);
+    }
+
+}
+setTimeout(show,500);
+
+
+</script>
+</html>
